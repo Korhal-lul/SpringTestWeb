@@ -22,5 +22,6 @@ export class InsertComponent implements OnInit {
   public insert() {
     const response = this.service.insert(this.pessoa);
     response.subscribe((data) => this.message = data);
+    this.router.navigate(['delete']);
   }
 }

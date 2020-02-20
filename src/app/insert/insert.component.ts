@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ServiceService} from '../service.service';
+import {Router} from '@angular/router';
+import {Pessoa} from '../pessoa';
 
 @Component({
   selector: 'app-insert',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InsertComponent implements OnInit {
 
-  constructor() { }
+  pessoa: Pessoa = new Pessoa(0, '', '', '', 0);
+  message: any;
+
+  constructor(private service: ServiceService, private router: Router) {
+  }
 
   ngOnInit(): void {
   }
 
+  public insert() {
+    const response = this.service.insert(this.pessoa);
+    response.subscribe((data) => this.message = data);
+  }
 }

@@ -3,7 +3,7 @@
   "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "SpringRest": {
+    "SpringTestWeb": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SpringRest",
+            "outputPath": "dist/SpringTestWeb",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SpringRest:build"
+            "browserTarget": "SpringTestWeb:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SpringRest:build:production"
+              "browserTarget": "SpringTestWeb:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SpringRest:build"
+            "browserTarget": "SpringTestWeb:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SpringRest:serve"
+            "devServerTarget": "SpringTestWeb:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SpringRest:serve:production"
+              "devServerTarget": "SpringTestWeb:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "SpringRest"
+  "defaultProject": "SpringTestWeb"
 }

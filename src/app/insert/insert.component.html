@@ -8,7 +8,7 @@
   </div>
   <div class="card-body">
     <form action="">
-      <fieldset>
+      <fieldset class="form">
         <div class="form-group">
           <label for="Nome">Nome:</label>
           <input type="text" name="Nome" placeholder="informe o nome" [(ngModel)]="pessoa.nome">
@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
           <label for="Nascimento">Nascimento:</label>
-          <input type="text" name="nascimento" [(ngModel)]="pessoa.anoNasc">
+          <input type="text" name="nascimento" [(ngModel)]="pessoa.nascimento">
         </div>
         <div class="form-group">
           <input type="submit" value="insert" placeholder="informe o ano de nascimento" class="btn btn-success" (click)="insert()">

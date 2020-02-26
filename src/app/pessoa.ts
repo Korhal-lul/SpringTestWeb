@@ -1,8 +1,8 @@
 export class Pessoa {
-  constructor(public id: Number,
-              public nome: String,
-              public cpf: String,
-              public email: String,
-              public anoNasc: Number) {
+  constructor(public id: number,
+              public nome: string,
+              public cpf: string,
+              public email: string,
+              public nascimento: number) {
   }
 }

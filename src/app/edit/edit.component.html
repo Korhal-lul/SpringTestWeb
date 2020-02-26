@@ -1,1 +1,30 @@
-<p>edit works!</p>
+<div class="container col-md-6">
+  <div class="card-header">
+    <h3>Edição de pessoas</h3>
+  </div>
+  <div class="card-body">
+    <form action="">
+      <fieldset>
+        <div class="form-group">
+          <label for="Nome">Nome:</label>
+          <input type="text" name="Nome" [(ngModel)]="pessoa.nome">
+        </div>
+        <div class="form-group">
+          <label for="CPF">CPF:</label>
+          <input type="text" name="cpf" [(ngModel)]="pessoa.cpf">
+        </div>
+        <div class="form-group">
+          <label for="Email">Email:</label>
+          <input type="text" name="email" [(ngModel)]="pessoa.email">
+        </div>
+        <div class="form-group">
+          <label for="Nascimento">Nascimento:</label>
+          <input type="text" name="nascimento" [(ngModel)]="pessoa.nascimento">
+        </div>
+        <div class="form-group">
+          <input type="submit" value="edit" placeholder="informe o ano de nascimento" class="btn btn-success" (click)="edit(pessoa)">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
